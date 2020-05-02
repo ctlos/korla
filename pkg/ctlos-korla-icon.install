@@ -1,10 +1,17 @@
+_iconpath=usr/share/icons
+
+_gtk_icon_cache() {
+    gtk-update-icon-cache -f -t "/$_iconpath/korla/"
+    gtk-update-icon-cache -f -t "/$_iconpath/korla-light/"
+    gtk-update-icon-cache -f -t "/$_iconpath/korla-light-panel/"
+    gtk-update-icon-cache -f -t "/$_iconpath/korla-pgrey/"
+    gtk-update-icon-cache -f -t "/$_iconpath/korla-parc/"
+}
+
 post_install() {
+    _gtk_icon_cache
 }
 
 post_upgrade() {
-    post_install
-}
-
-post_remove() {
-    # rm -rf /etc/skel/.config/autostart
+    _gtk_icon_cache
 }
