@@ -22,7 +22,7 @@ _iconcache=icon-theme.cache
 _iconnewcachescript=create-new-icon-theme.cache.sh
 
 package() {
-    cd "$srcdir/korla-$pkgver"
+    cd "$srcdir/korla"
 
     # Delete useless files from source folder
     rm -f "korla/$_iconnewcachescript"
